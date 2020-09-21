@@ -4,7 +4,8 @@ LABEL maintainer="Ian Allison <iana@pims.math.ca>"
 
 WORKDIR /github/workspace
 
-RUN yum install -y rpmdevtools yum-utils spectool && \
+RUN yum install epel-release && \
+    yum install -y rpmdevtools yum-utils spectool && \
     yum clean all && \
     rm -r -f /var/cache/*
 
