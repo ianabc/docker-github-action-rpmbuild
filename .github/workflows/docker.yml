@@ -24,6 +24,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: pimsubc/rpmbuild:latest
+          tags: pimsubc/centos7-rpmbuild:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
